@@ -1,3 +1,4 @@
 # Daily Pkg
 
-> Learn about a package per day
+> https://daily-pkg.netlify.app/  
+> Learn about a package per day  
