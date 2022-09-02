@@ -1,5 +1,14 @@
 const dpData = [
   {
+    date: '2020-09-02',
+    name: 'chalk',
+    version: '5.0.1',
+    description: '终端打印输出样式',
+    use_related: 'v5为纯粹的ESM，欠佳可考虑v4',
+    peculiarity: '',
+    tags: '',
+  },
+  {
     date: '2020-09-01',
     name: 'nprogress',
     version: '0.2.0',
