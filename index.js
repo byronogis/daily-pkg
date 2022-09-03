@@ -1,6 +1,15 @@
 const dpData = [
   {
     date: '2020-09-02',
+    name: 'ip',
+    version: '1.1.8',
+    description: 'node 下的 ip 地址工具',
+    use_related: '本地 ip 相关',
+    peculiarity: '',
+    tags: '',
+  },
+  {
+    date: '2020-09-02',
     name: 'chalk',
     version: '5.0.1',
     description: '终端打印输出样式',
