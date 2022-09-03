@@ -1,6 +1,6 @@
 const dpData = [
   {
-    date: '2020-09-02',
+    date: '2022-09-03',
     name: 'ip',
     version: '1.1.8',
     description: 'node 下的 ip 地址工具',
@@ -9,7 +9,7 @@ const dpData = [
     tags: '',
   },
   {
-    date: '2020-09-02',
+    date: '2022-09-02',
     name: 'chalk',
     version: '5.0.1',
     description: '终端打印输出样式',
@@ -18,7 +18,7 @@ const dpData = [
     tags: '',
   },
   {
-    date: '2020-09-01',
+    date: '2022-09-01',
     name: 'nprogress',
     version: '0.2.0',
     description: '关联ajax的进度条展示',
