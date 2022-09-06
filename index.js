@@ -1,5 +1,14 @@
 const dpData = [
   {
+    date: '2022-09-04',
+    name: 'randomcolor',
+    version: '0.6.2',
+    description: '随即生成柔和的颜色',
+    use_related: '可控制色调',
+    peculiarity: '',
+    tags: '',
+  },
+  {
     date: '2022-09-03',
     name: 'ip',
     version: '1.1.8',
