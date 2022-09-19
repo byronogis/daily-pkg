@@ -1,5 +1,14 @@
 const dpData = [
   {
+    date: '2022-09-19',
+    name: 'vuex-persistedstate',
+    version: '4.1.0',
+    description: 'vuex数据持久化',
+    use_related: '',
+    peculiarity: '不再维护',
+    tags: '',
+  },
+  {
     date: '2022-09-04',
     name: 'randomcolor',
     version: '0.6.2',
