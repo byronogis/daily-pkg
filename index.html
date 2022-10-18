@@ -33,7 +33,12 @@
         <tbody >
           <tr><td v-for="num in tableHead.length" :key="num">...</td></tr>
           <tr v-for="pkg in pkgData" :key="pkg.date">
-            <td v-for="value,index in Object.values(pkg)" :key="index">{{ value }}</td>
+            <td v-for="key in Object.keys(pkg)" :key="key">
+              <template v-if="key === 'name'">
+                <a :href="`https://www.npmjs.com/package/${pkg[key]}`">{{ pkg[key] }}</a>
+              </template>
+              <template v-else>{{ pkg[key] }}</template>
+            </td>
           </tr>
         </tbody>
       </table>
