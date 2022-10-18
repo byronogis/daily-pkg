@@ -2,6 +2,15 @@ const PKG_FIELD = ['date', 'name', 'version', 'description', 'use_related', 'pec
 
 const pkgData = [
   {
+    date: '2022-10-18',
+    name: 'normalize.css',
+    version: '8.0.1',
+    description: 'css 样式初始化',
+    use_related: '',
+    peculiarity: '',
+    tags: '',
+  },
+  {
     date: '2022-09-19',
     name: 'vuex-persistedstate',
     version: '4.1.0',
