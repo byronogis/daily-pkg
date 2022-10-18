@@ -1,4 +1,6 @@
-const dpData = [
+const PKG_FIELD = ['date', 'name', 'version', 'description', 'use_related', 'peculiarity', 'tags']
+
+const pkgData = [
   {
     date: '2022-09-19',
     name: 'vuex-persistedstate',
@@ -46,35 +48,7 @@ const dpData = [
   },
 ]
 
-/**
- * Add data to a table
- * @param {{ data, name, version, description, use_related, peculiarity, tags, }[]} dataSet 
- * @param {string} selector
- */
-function updTbody(dataSet, selector = 'tbody') {
-  const tbody = document.querySelector(`${selector}`)
-
-  const dataFragment = document.createDocumentFragment()
-  
-  dataSet.forEach(data => {
-    const tr = document.createElement('tr')
-    
-    Object.keys(data).forEach(key => {
-      const td = document.createElement('td')
-      const content = data[key] || '/'
-      if (key === 'name') {
-        td.innerHTML = `<a href="https://www.npmjs.com/package/${content}">${content}</a>`
-      } else [
-        td.textContent = content
-      ]
-      tr.appendChild(td)
-    })
-  
-    dataFragment.appendChild(tr)
-  })
-  
-  tbody.appendChild(dataFragment)
-
+export {
+  PKG_FIELD,
+  pkgData
 }
-
-updTbody(dpData, '.dp-tbody')
