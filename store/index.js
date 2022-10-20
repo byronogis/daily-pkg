@@ -1,4 +1,4 @@
-const PKG_FIELD = ['date', 'name', 'version', 'description', 'use_related', 'peculiarity', 'tags']
+const PKG_FIELD = ['date', 'name', 'version', 'description', 'note']
 
 const pkgData = [
   {
@@ -9,6 +9,7 @@ const pkgData = [
     use_related: '',
     peculiarity: '',
     tags: '',
+    note: true,
   },
   {
     date: '2022-09-19',

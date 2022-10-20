@@ -7,6 +7,7 @@
   <title>Daily Pkg</title>
   <link rel="stylesheet" href="./style/normalize.css">
   <link rel="stylesheet" href="./style/style.css">
+  <!-- vue -->
   <script type="importmap">
     {
       "imports": {
@@ -16,36 +17,46 @@
   </script>
   <!-- unocss -->
   <script src="./lib/unocss.attributify.global.js"></script>
+  <!-- marked -->
+  <script src="./lib/marked.min.js"></script>
 
 </head>
 <body>
-  <div id="app">
-    <h2>Daily Pkg</h2>
-    <p>Learn about a package per day</p>
+  <div id="app" px-4>
+    <header class="header">
+      <h2>Daily Pkg</h2>
+      <p>Learn about a package per day</p>
+    </header>
     
     <!-- 左侧表格展示 -->
-    <div >
-      <table border border-collapse>
-        <thead>
-          <tr><th v-for="field in tableHead" :key="field">{{ field }}</th></tr>
+    <section class="table-show" overflow-y-scroll>
+      <table border border-spacing-0 relative>
+        <thead sticky top-0 left-0 right-0 m-auto h-8 bg-white>
+          <tr><th v-for="field in tableHead" :key="field" px-2>{{ field }}</th></tr>
         </thead>
     
-        <tbody >
-          <tr><td v-for="num in tableHead.length" :key="num">...</td></tr>
+        <tbody>
+          <tr><td v-for="num in tableHead.length" :key="num" text-center>...</td></tr>
           <tr v-for="pkg in pkgData" :key="pkg.date">
-            <td v-for="key in Object.keys(pkg)" :key="key">
+            <td v-for="key in tableHead" :key="key" px-2 text-center>
               <template v-if="key === 'name'">
-                <a :href="`https://www.npmjs.com/package/${pkg[key]}`">{{ pkg[key] }}</a>
+                <a :href="`https://www.npmjs.com/package/${pkg[key]}`" target="_blank">{{ pkg[key] }}</a>
+              </template>
+              <template v-else-if="key ==='note'">
+                <template v-if="pkg[key]">
+                  <a href="javascript:;" @click="showUsage(pkg.name)">显示</a>
+                </template>
+                <template v-else>无</template>
               </template>
               <template v-else>{{ pkg[key] }}</template>
             </td>
           </tr>
         </tbody>
       </table>
-    </div>
+    </section>
 
     <!-- 右侧简单使用记录 -->
-    <div class="simple-usage"></div>
+    <section class="simple-usage" v-html="marked.parse(pkgMD)"></section>
   </div>
   
   <!-- GitHub Corners: https://tholman.com/github-corners/ -->
@@ -55,12 +66,27 @@
   <script type="module">
     import { createApp } from 'vue'
     import { PKG_FIELD, pkgData } from './store/index.js'
-    console.log(pkgData)
+    import { getMD } from './index.js'
+
     createApp({
       data() {
         return {
           tableHead: PKG_FIELD,
-          pkgData
+          pkgData,
+          pkgMD: '点击 name 列进行选择展示',
+          marked,
+        }
+      },
+      methods: {
+        showUsage(name) {
+          const that = this
+          that.pkgMD = '...'
+          getMD(name).then(res => {
+            that.pkgMD = res
+          }).catch((err) => {
+            console.log(err)
+            that.pkgMD = 'error'
+          })
         }
       }
     }).mount('#app')

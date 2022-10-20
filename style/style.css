@@ -1,0 +1,19 @@
+#app {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'head head' 'table usage';
+  gap: 30px;
+}
+#app .header {
+  grid-area: head;
+}
+#app .table-show {
+  grid-area: table;
+}
+#app .simple-usage {
+  grid-area: usage;
+}
+#app .simple-usage h2 {
+  margin-top: 0;
+}
