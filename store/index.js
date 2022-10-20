@@ -2,6 +2,13 @@ const PKG_FIELD = ['date', 'name', 'version', 'description', 'note']
 
 const pkgData = [
   {
+    date: '2022-10-20',
+    name: 'marked',
+    version: '4.1.1',
+    description: '将 md 解析为 html',
+    note: true,
+  },
+  {
     date: '2022-10-18',
     name: 'normalize.css',
     version: '8.0.1',
