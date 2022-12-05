@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "marked": "^4.2.3",
+    "normalize.css": "^8.0.1",
+    "postcss-nested": "^6.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.33.1",
+    "@types/marked": "^4.0.7",
+    "@unocss/nuxt": "^0.47.5",
+    "@unocss/preset-attributify": "^0.47.5",
+    "eslint": "^8.29.0",
+    "nuxt": "3.0.0",
+    "postcss": "^8.4.19",
+    "typescript": "^4.9.3"
+  }
+}
