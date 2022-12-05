@@ -1,12 +1,12 @@
-const PKG_FIELD = ['date', 'name', 'version', 'description', 'note']
+import type { TableData } from '~/types'
 
-const pkgData = [
+const pkgData: TableData[] = [
   {
     date: '2022-10-20',
     name: 'marked',
     version: '4.1.1',
     description: '将 md 解析为 html',
-    note: true,
+    hasNote: true,
   },
   {
     date: '2022-10-18',
@@ -16,7 +16,7 @@ const pkgData = [
     use_related: '',
     peculiarity: '',
     tags: '',
-    note: true,
+    hasNote: true,
   },
   {
     date: '2022-09-19',
@@ -66,6 +66,5 @@ const pkgData = [
 ]
 
 export {
-  PKG_FIELD,
-  pkgData
+  pkgData,
 }
