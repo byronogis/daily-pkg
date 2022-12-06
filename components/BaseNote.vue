@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { marked } from 'marked'
+import 'github-markdown-css'
 
 const props = defineProps<{
   source: string
@@ -7,5 +8,9 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div id="components-base-note" v-html="marked.parse(props.source)" />
+  <div
+    id="components-base-note"
+    class="markdown-body"
+    v-html="marked.parse(props.source)"
+  />
 </template>

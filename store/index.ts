@@ -3,6 +3,13 @@ import type { TableData } from '~/types'
 const pkgData: TableData[] = [
   {
     date: '2022-12-06',
+    name: 'github-markdown-css',
+    version: '5.1.0',
+    description: 'github中的markdown样式',
+    hasNote: true,
+  },
+  {
+    date: '2022-12-06',
     name: 'uuid',
     version: '9.0.0',
     description: '生成全局唯一标识符',

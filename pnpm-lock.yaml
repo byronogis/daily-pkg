@@ -7,6 +7,7 @@ specifiers:
   '@unocss/preset-attributify': ^0.47.5
   autoprefixer: ^10.4.13
   eslint: ^8.29.0
+  github-markdown-css: ^5.1.0
   marked: ^4.2.3
   normalize.css: ^8.0.1
   nuxt: 3.0.0
@@ -15,14 +16,15 @@ specifiers:
   typescript: ^4.9.3
 
 dependencies:
-  '@types/marked': 4.0.7
   autoprefixer: 10.4.13_postcss@8.4.19
+  github-markdown-css: 5.1.0
   marked: 4.2.3
   normalize.css: 8.0.1
   postcss-nested: 6.0.0_postcss@8.4.19
 
 devDependencies:
   '@antfu/eslint-config': 0.33.1_s5ps7njkmjlaqajutnox5ntcla
+  '@types/marked': 4.0.7
   '@unocss/nuxt': 0.47.5
   '@unocss/preset-attributify': 0.47.5
   eslint: 8.29.0
@@ -954,7 +956,7 @@ packages:
 
   /@types/marked/4.0.7:
     resolution: {integrity: sha512-eEAhnz21CwvKVW+YvRvcTuFKNU9CV1qH+opcgVK3pIMI6YZzDm6gc8o2vHjldFk6MGKt5pueSB7IOpvpx5Qekw==}
-    dev: false
+    dev: true
 
   /@types/mdast/3.0.10:
     resolution: {integrity: sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==}
@@ -3392,6 +3394,10 @@ packages:
     dependencies:
       git-up: 7.0.0
     dev: true
+
+  /github-markdown-css/5.1.0:
+    resolution: {integrity: sha512-QLtORwHHtUHhPMHu7i4GKfP6Vx5CWZn+NKQXe+cBhslY1HEt0CTEkP4d/vSROKV0iIJSpl4UtlQ16AD8C6lMug==}
+    dev: false
 
   /gittar/0.1.1:
     resolution: {integrity: sha512-p+XuqWJpW9ahUuNTptqeFjudFq31o6Jd+maMBarkMAR5U3K9c7zJB4sQ4BV8mIqrTOV29TtqikDhnZfCD4XNfQ==}
