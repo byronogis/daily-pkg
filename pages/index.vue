@@ -7,10 +7,12 @@ const appConfig = useAppConfig()
 const tableHead: TableHead = ['date', 'name', 'version', 'description', 'hasNote']
 const tableData = pkgData
 
+const noteName = ref('')
 const noteSource = ref('点击 hasNote 列进行选择展示')
 
 const handleShowNote = (name: string) => {
   console.warn('handleShowNote: ', name)
+  noteName.value = name
   const md = import(`~/store/notes/${name}.md?raw`)
   md.then((res) => {
     noteSource.value = res.default
@@ -36,6 +38,9 @@ const handleShowNote = (name: string) => {
     </section>
 
     <section class="daily-css-note">
+      <h2 v-if="noteName" text-center>
+        {{ noteName }}
+      </h2>
       <BaseNote
         :source="noteSource"
       />
