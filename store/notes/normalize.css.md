@@ -1,15 +1,19 @@
-### NPM
+### usage
+
+#### npm
 
 `npm install --save normalize.css`
 
-### CDN
+`import 'normalize.css'`
 
-> See https://yarnpkg.com/en/package/normalize.css
+#### cdn
+
+> See https://yarnpkg.com/en/package/normalize.css  
 
 ```html
 <script src="https://unpkg.com/normalize.css@8.0.1/normalize.css"></script>
 ```
 
-### Download
+#### local
 
-See https://necolas.github.io/normalize.css/latest/normalize.css
+> See https://necolas.github.io/normalize.css/latest/normalize.css  

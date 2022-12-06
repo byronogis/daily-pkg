@@ -2,6 +2,13 @@ import type { TableData } from '~/types'
 
 const pkgData: TableData[] = [
   {
+    date: '2022-12-06',
+    name: 'uuid',
+    version: '9.0.0',
+    description: '生成全局唯一标识符',
+    hasNote: true,
+  },
+  {
     date: '2022-10-20',
     name: 'marked',
     version: '4.1.1',
@@ -26,6 +33,7 @@ const pkgData: TableData[] = [
     use_related: '',
     peculiarity: '不再维护',
     tags: '',
+    hasNote: true,
   },
   {
     date: '2022-09-04',
@@ -35,6 +43,7 @@ const pkgData: TableData[] = [
     use_related: '可控制色调',
     peculiarity: '',
     tags: '',
+    hasNote: true,
   },
   {
     date: '2022-09-03',
@@ -44,6 +53,7 @@ const pkgData: TableData[] = [
     use_related: '本地 ip 相关',
     peculiarity: '',
     tags: '',
+    hasNote: true,
   },
   {
     date: '2022-09-02',
@@ -53,6 +63,7 @@ const pkgData: TableData[] = [
     use_related: 'v5为纯粹的ESM，欠佳可考虑v4',
     peculiarity: '',
     tags: '',
+    hasNote: true,
   },
   {
     date: '2022-09-01',
@@ -62,6 +73,7 @@ const pkgData: TableData[] = [
     use_related: '可调整运动曲线/挂载位置等',
     peculiarity: '',
     tags: '',
+    hasNote: true,
   },
 ]
 
