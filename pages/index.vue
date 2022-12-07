@@ -29,13 +29,24 @@ const {
       />
     </section>
 
-    <section class="daily-css-note" overflow-auto px-8>
-      <h2 v-if="noteName" text-center>
-        {{ noteName }}
-      </h2>
-      <BaseNote
-        :source="noteSource"
-      />
+    <section class="daily-css-note" overflow-auto px-8 relative>
+      <template v-if="noteName">
+        <BaseIcon
+          absolute top-0 right-0
+          cursor-pointer
+          name="close"
+          @click="handleShowNote('')"
+        />
+        <h2 text-center>
+          {{ noteName }}
+        </h2>
+        <BaseNote
+          :source="noteSource"
+        />
+      </template>
+      <template v-else>
+        点击 hasNote 列进行选择展示
+      </template>
     </section>
   </div>
 </template>
