@@ -14,7 +14,7 @@ const showNote = (name: string) => {
 </script>
 
 <template>
-  <table border border-spacing-0 relative>
+  <table relative>
     <thead sticky top-0 left-0 right-0 m-auto h-8 bg-white>
       <tr>
         <th v-for="field in props.tableHead" :key="field" px-2>
@@ -25,12 +25,12 @@ const showNote = (name: string) => {
 
     <tbody>
       <tr>
-        <td v-for="num in props.tableHead.length" :key="num" text-center>
+        <td v-for="num in props.tableHead.length" :key="num">
           ...
         </td>
       </tr>
       <tr v-for="pkg in props.tableData" :key="pkg.date">
-        <td v-for="key in props.tableHead" :key="key" px-2 text-center>
+        <td v-for="key in props.tableHead" :key="key" px-2>
           <template v-if="key === 'name'">
             <a :href="`https://www.npmjs.com/package/${pkg[key]}`" target="_blank">{{ pkg[key] }}</a>
           </template>
@@ -50,3 +50,17 @@ const showNote = (name: string) => {
     </tbody>
   </table>
 </template>
+
+<style type="postcss" scoped>
+table,
+table tr th,
+table tr td {
+  border: 1px solid #000;
+}
+table {
+  width: 100%;
+  line-height: 25px;
+  text-align: center;
+  border-collapse: collapse;
+}
+</style>
