@@ -7,19 +7,11 @@ const appConfig = useAppConfig()
 const tableHead: TableHead = ['date', 'name', 'version', 'description', 'hasNote']
 const tableData = pkgData
 
-const noteName = ref('')
-const noteSource = ref('点击 hasNote 列进行选择展示')
-
-const handleShowNote = (name: string) => {
-  console.warn('handleShowNote: ', name)
-  noteName.value = name
-  const md = import(`~/store/notes/${name}.md?raw`)
-  md.then((res) => {
-    noteSource.value = res.default
-  }).catch((e) => {
-    console.error(e)
-  })
-}
+const {
+  noteName,
+  noteSource,
+  handleNote: handleShowNote,
+} = useNote()
 </script>
 
 <template>
