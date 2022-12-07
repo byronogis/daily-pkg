@@ -21,6 +21,8 @@
     "@types/marked": "^4.0.7",
     "@unocss/nuxt": "^0.47.5",
     "@unocss/preset-attributify": "^0.47.5",
+    "@vueuse/core": "^9.6.0",
+    "@vueuse/nuxt": "^9.6.0",
     "eslint": "^8.29.0",
     "nuxt": "3.0.0",
     "postcss": "^8.4.19",
