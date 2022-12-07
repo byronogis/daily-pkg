@@ -3,7 +3,7 @@ const appConfig = useAppConfig()
 </script>
 
 <template>
-  <div data-layout="default" p-8>
+  <div data-layout="default">
     <GithubCorner :repo="appConfig.repo" />
     <slot />
   </div>

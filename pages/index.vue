@@ -15,13 +15,13 @@ const {
 </script>
 
 <template>
-  <div id="pages-index">
+  <div id="pages-index" box-border p-8 h-100vh>
     <header class="daily-css-header">
       <h2>{{ appConfig.title }}</h2>
       <p>{{ appConfig.subTitle }}</p>
     </header>
 
-    <section class="daily-css-table" overflow-y-scroll>
+    <section class="daily-css-table" overflow-auto>
       <BaseTable
         :table-head="tableHead"
         :table-data="tableData"
@@ -29,7 +29,7 @@ const {
       />
     </section>
 
-    <section class="daily-css-note">
+    <section class="daily-css-note" overflow-auto px-8>
       <h2 v-if="noteName" text-center>
         {{ noteName }}
       </h2>
@@ -44,10 +44,10 @@ const {
 #pages-index {
   display: grid;
   grid-template-rows: 100px 1fr;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: repeat(2, 50%);
   grid-template-areas:  'head head'
                         'table usage';
-  gap: 30px;
+  /* gap: 30px; */ /* 列2个50% 会造成溢出 */
 
   .daily-css-header {
     grid-area: head;

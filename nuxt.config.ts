@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   },
   css: [
     'normalize.css',
+    '~/assets/css/index.postcss',
   ],
   postcss: {
     plugins: {
