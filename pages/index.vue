@@ -13,7 +13,8 @@ const {
   handleNote: handleShowNote,
 } = useNote()
 
-const isLargeScreen = useMediaQuery('(min-width: 750px)')
+const { width: windowWidth } = useWindowSize()
+const isLargeScreen = computed(() => windowWidth.value > 750)
 
 const gridTemplateAreas = computed(() => {
   return `\'head head\' \'table ${isLargeScreen.value ? 'usage' : 'table'}\'`
