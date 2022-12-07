@@ -12,6 +12,25 @@ const {
   noteSource,
   handleNote: handleShowNote,
 } = useNote()
+
+const isLargeScreen = useMediaQuery('(min-width: 750px)')
+
+const gridTemplateAreas = computed(() => {
+  return `\'head head\' \'table ${isLargeScreen.value ? 'usage' : 'table'}\'`
+})
+
+const styleDailyCCssNote = computed<any>(() => {
+  const smallStyle = {
+    position: 'fixed',
+    inset: 0,
+    top: '30%',
+    backgroundColor: '#fff',
+    boxShadow: '0 -2px 20px #333',
+    display: noteName.value ? 'block' : 'none',
+
+  }
+  return isLargeScreen.value ? {} : smallStyle
+})
 </script>
 
 <template>
@@ -29,7 +48,12 @@ const {
       />
     </section>
 
-    <section class="daily-css-note" overflow-auto px-8 relative>
+    <section
+      class="daily-css-note"
+      relative
+      overflow-auto px-8
+      :style="styleDailyCCssNote"
+    >
       <template v-if="noteName">
         <BaseIcon
           absolute top-0 right-0
@@ -56,8 +80,7 @@ const {
   display: grid;
   grid-template-rows: 100px 1fr;
   grid-template-columns: repeat(2, 50%);
-  grid-template-areas:  'head head'
-                        'table usage';
+  grid-template-areas:  v-bind(gridTemplateAreas);
   /* gap: 30px; */ /* 列2个50% 会造成溢出 */
 
   .daily-css-header {

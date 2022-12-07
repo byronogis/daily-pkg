@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   },
   modules: [
     '@unocss/nuxt',
+    '@vueuse/nuxt',
   ],
   unocss: {
     attributify: true,
