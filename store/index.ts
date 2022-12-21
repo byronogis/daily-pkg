@@ -2,6 +2,13 @@ import type { TableData } from '~/types'
 
 const pkgData: TableData[] = [
   {
+    date: '2022-12-21',
+    name: 'nodemon',
+    version: '2.0.20',
+    description: '文件修改后自动重启node服务',
+    hasNote: true,
+  },
+  {
     date: '2022-12-06',
     name: 'github-markdown-css',
     version: '5.1.0',
