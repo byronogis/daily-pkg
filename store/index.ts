@@ -2,6 +2,13 @@ import type { TableData } from '~/types'
 
 const pkgData: TableData[] = [
   {
+    date: '2022-12-31',
+    name: 'fast-glob',
+    version: '3.2.12',
+    description: '批量获取文件信息',
+    hasNote: false,
+  },
+  {
     date: '2022-12-21',
     name: 'nodemon',
     version: '2.0.20',
