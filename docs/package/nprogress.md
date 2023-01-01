@@ -1,3 +1,9 @@
+---
+title: nprogress
+version: 0.2.0
+description: 网页加载进度条
+---
+
 ### usage
 
 #### npm

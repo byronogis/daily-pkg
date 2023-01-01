@@ -1,3 +1,9 @@
+---
+title: github-markdown-css
+version: 5.1.0
+description: github 中的 markdown 样式
+---
+
 ### usage
 
 > 记得向目标区域添加 class, `markdown-body`  
