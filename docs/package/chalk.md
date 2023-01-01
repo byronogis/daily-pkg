@@ -1,3 +1,9 @@
+---
+title: chalk
+version: 5.0.1
+description: 终端打印输出样式
+---
+
 ### usage
 
 #### npm

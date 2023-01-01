@@ -1,3 +1,10 @@
+---
+title: uuid
+version: 9.0.0
+description: 生成全局唯一标识符
+---
+
+
 ### usage
 
 #### npm
@@ -8,8 +15,6 @@ npm install uuid
 
 ```js
 import { v4 as uuid } from 'uuid'
-// or
-const { v4: uuid } = require('uuid')
 
 uuid()
 ```

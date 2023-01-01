@@ -1,3 +1,10 @@
+---
+title: randomcolor
+version: 0.6.2
+description: 随即生成柔和的颜色
+---
+
+
 ### usage
 
 #### npm
