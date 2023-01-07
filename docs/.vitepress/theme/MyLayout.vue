@@ -17,7 +17,8 @@ const pkgUrl = computed(() => `https://www.npmjs.com/package/${frontmatter.value
         <h1>
           {{ frontmatter.title }}
         </h1>
-        <blockquote>{{ frontmatter.description }}</blockquote>
+        <blockquote v-if="frontmatter.version">v{{ frontmatter.version }}</blockquote>
+        <blockquote v-if="frontmatter.description">{{ frontmatter.description }}</blockquote>
         <blockquote v-if="frontmatter.tags?.includes('npm')"><a :href="pkgUrl" target="_blank">在 npm 上查看</a></blockquote>
       </div>
 
