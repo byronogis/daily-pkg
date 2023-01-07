@@ -6,7 +6,6 @@ import { computed } from 'vue'
 const { Layout } = DefaultTheme
 
 const frontmatter = useData().frontmatter
-console.log(useData())
 const pkgUrl = computed(() => `https://www.npmjs.com/package/${frontmatter.value.title}`)
 </script>
 
