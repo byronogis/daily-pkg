@@ -2,6 +2,8 @@
 title: github-markdown-css
 version: 5.1.0
 description: github 中的 markdown 样式
+tags: 
+  - npm
 ---
 
 ### usage
