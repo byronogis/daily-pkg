@@ -1,10 +1,10 @@
 {
+  "private": true,
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "docs:dev": "pnpm run --filter docs docs:dev",
     "docs:build": "pnpm run --filter docs docs:build",
     "example:dev": "pnpm run --filter example dev"
-  },
-  "private": true
+  }
 }
