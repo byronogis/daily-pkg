@@ -9,15 +9,15 @@ const sidebarItemMap = (source) => {
     const { data, path } = matter.read(file)
     return {
       text: data.title,
-      link: path.slice(4),
+      link: path,
     }
   })
 }
 
-const guideFiles = fg.sync('docs/guide/**/*.md')
+const guideFiles = fg.sync('guide/**/*.md')
 const guideItems = sidebarItemMap(guideFiles)
 
-const packageFiles = fg.sync('docs/package/**/*.md')
+const packageFiles = fg.sync('package/**/*.md')
 const packageItems = sidebarItemMap(packageFiles)
 
 export const sidebarArr = [
