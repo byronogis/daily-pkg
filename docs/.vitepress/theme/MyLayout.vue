@@ -1,12 +1,11 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import { useData } from 'vitepress'
-import { computed } from 'vue'
 
 const { Layout } = DefaultTheme
 
-const frontmatter = useData().frontmatter
-const pkgUrl = computed(() => `https://www.npmjs.com/package/${frontmatter.value.title}`)
+const {frontmatter} = useData()
+const getPkgUrl = (name) => `https://www.npmjs.com/package/${name}`
 </script>
 
 <template>
@@ -18,7 +17,7 @@ const pkgUrl = computed(() => `https://www.npmjs.com/package/${frontmatter.value
         </h1>
         <blockquote v-if="frontmatter.version">v{{ frontmatter.version }}</blockquote>
         <blockquote v-if="frontmatter.description">{{ frontmatter.description }}</blockquote>
-        <blockquote v-if="frontmatter.tags?.includes('npm')"><a :href="pkgUrl" target="_blank">在 npm 上查看</a></blockquote>
+        <blockquote v-if="frontmatter.tags?.includes('npm')"><a :href="getPkgUrl(frontmatter.title)" target="_blank">在 npm 上查看</a></blockquote>
       </div>
 
     </template>
