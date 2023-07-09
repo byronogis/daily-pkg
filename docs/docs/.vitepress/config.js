@@ -30,10 +30,10 @@ export default defineConfig({
     socialLinks: [],
     footer: {
       message: 'Learn about a package per day.',
-      copyright: 'Copyright @ PRESENT Liam',
+      copyright: 'Copyright @ PRESENT Byron',
     },
     editLink: {
-      pattern: 'https://github.com/liamrad/daily-pkg/edit/main/docs/:path',
+      pattern: 'https://github.com/byronogis/daily-pkg/edit/main/docs/:path',
       text: '在 GitHub 上编辑',
     },
     lastUpdatedText: '最后更新',

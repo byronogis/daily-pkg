@@ -17,5 +17,5 @@ hero:
       link: /guide/overview
     - theme: alt
       text: View on GitHub
-      link: https://github.com/liamrad/daily-pkg
+      link: https://github.com/byronogis/daily-pkg
 ---
