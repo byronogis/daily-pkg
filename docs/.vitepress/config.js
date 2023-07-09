@@ -3,6 +3,7 @@
  */
 
 import { defineConfig } from 'vitepress'
+import UnoCSS from 'unocss/vite'
 import { sidebarArr } from './sidebar'
 
 export default defineConfig({
@@ -99,7 +100,9 @@ export default defineConfig({
    * See https://vitepress.dev/reference/site-config#vite
    */
   vite: {
-    // Vite config options
+    plugins: [
+      UnoCSS(),
+    ],
   },
 
   /**
