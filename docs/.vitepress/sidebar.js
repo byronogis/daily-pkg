@@ -9,7 +9,7 @@ const sidebarItemMap = (source) => {
     const { data, path } = matter.read(file)
     return {
       text: data.title,
-      link: path,
+      link: `/${path}`,
     }
   })
 }
