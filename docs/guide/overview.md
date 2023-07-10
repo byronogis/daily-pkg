@@ -21,7 +21,7 @@ const pkgs = Object.values(docs).map(({ __pageData: { frontmatter, relativePath,
 
 <table>
   <thead>
-    <tr><th v-for="head in ['名字', '版本', '描述', '查看记录']" :key="head">{{ head }}</th></tr>
+    <tr><th v-for="head in ['名字', '版本', '描述', '标签', '查看记录']" :key="head">{{ head }}</th></tr>
   </thead>
 
   <tbody>
@@ -29,6 +29,7 @@ const pkgs = Object.values(docs).map(({ __pageData: { frontmatter, relativePath,
       <td>{{ pkg.title }}</td>
       <td>{{ pkg.version }}</td>
       <td>{{ pkg.description }}</td>
+      <td>{{ pkg.tags?.filter(tag => (!['npm'].includes(tag))).join(',') ?? '' }}</td>
       <td><a :href="pkg.relativePath">跳转</a></td>
     </tr>
   </tbody>
