@@ -4,6 +4,7 @@ version: 9.0.0
 description: 生成全局唯一标识符
 tags: 
   - npm
+  - 标识
 ---
 
 

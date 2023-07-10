@@ -4,6 +4,7 @@ version: 0.2.0
 description: 网页加载进度条
 tags: 
   - npm
+  - 样式
 ---
 
 ### usage

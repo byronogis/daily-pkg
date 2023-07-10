@@ -4,6 +4,7 @@ version: 4.1.0
 description: vuex数据持久化
 tags: 
   - npm
+  - 数据
 ---
 
 

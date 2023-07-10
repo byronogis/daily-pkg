@@ -4,6 +4,7 @@ version: 3.2.12
 description: 遍历获取文件路径
 tags: 
   - npm
+  - 路径
 ---
 
 ## 使用

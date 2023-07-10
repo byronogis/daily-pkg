@@ -4,6 +4,7 @@ version: 4.0.3
 description: 解析文件, 可解析 front-matter
 tags: 
   - npm
+  - 文件
 ---
 
 ## 使用

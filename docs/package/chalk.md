@@ -4,6 +4,7 @@ version: 5.0.1
 description: 终端打印输出样式
 tags: 
   - npm
+  - 打印
 ---
 
 ### usage

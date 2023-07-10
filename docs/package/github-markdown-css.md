@@ -4,6 +4,7 @@ version: 5.1.0
 description: github 中的 markdown 样式
 tags: 
   - npm
+  - 样式
 ---
 
 ### usage

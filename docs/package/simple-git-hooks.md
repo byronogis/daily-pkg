@@ -4,6 +4,7 @@ version: 2.8.1
 description: 管理 Git 钩子的工具
 tags: 
   - npm
+  - git
 ---
 
 ## 认识

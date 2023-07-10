@@ -4,6 +4,7 @@ version: 0.28.0
 description: 在 vite 中使用基于文件系统的路由
 tags: 
   - npm
+  - 路由
 ---
 
 ### install
